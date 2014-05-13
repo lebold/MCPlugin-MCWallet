@@ -1,0 +1,49 @@
+name: MCWallet
+version: 1
+main: aplicable.mcplugin.mcwallet.MCWallet
+commands:
+  money:
+    description: Money management.
+permissions:
+  money.*:
+    description: Gives access to all money commands
+    children:
+      money.add: true
+      money.set: true
+      money.remove: true
+      money.give: true
+      money.check: true
+      money.checkother: true
+      money.checkrank: true
+      money.checkranktop: true
+      money.help: true
+  money.add:
+    description: Allows you to add money to a player's account
+    default: op
+  money.set:
+    description: Allows you to set the balance of a player's account
+    default: op
+  money.remove:
+    description: Allows you to remove the balance of a player's account
+    default: op
+  money.give:
+    descriptions: Allows you to transfer money to another player's account
+    default: true
+  money.check:
+    descriptions: Allows you to check the balance of your account
+    default: true
+  money.checkother:
+    descriptions: Allows you to check the balance of another player
+    default: true
+  money.checkrank:
+    descriptions: Allows you to check the rank of your balance
+    default: true
+  money.checkrankother:
+    descriptions: Allows you to check the rank of another player
+    default: true
+  money.checkranktop:
+    descriptions: Displays a chart of the top-5 money-makers
+    default: true
+  money.help:
+    descriptions: Gives information on money command
+    default: true
